@@ -27,8 +27,15 @@
     </main>
     <section class="weather" id="weather">
         <div class="container">
-            
+            <h2>Weatherly</h2>
+            <input type="text" id="city" placeholder="Enter City">
+            <button onclick="getWeather()">Search</button>
+            <img class="weather-icon" style="display: none;" />
+            <div class="temp-div"></div>
+            <div class="weather-info"></div>
+            <div class="hourly-forecast"></div>
         </div>
+        <script src="script.js"></script>
     </section>
     <section class="about" id="about">
         <div class="about-container">
