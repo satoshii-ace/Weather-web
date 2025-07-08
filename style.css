@@ -88,12 +88,7 @@ main {
     background-color: #334155;
     color: #38BDF8;
 }
-.hero img {
-    width: 500px;
-    height: auto;
-    border-radius: 0.5rem;
-}
-
+ 
 .about {
     padding: 4rem;
     text-align: center;
