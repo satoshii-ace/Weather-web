@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Web</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <nav>
+    <nav >
         <div class="logo">Weatherly</div>
         <ul>
             <li><a href="#main">Home</a></li>
@@ -18,18 +19,18 @@
     </nav>
     <main id="main">
         <div class="text-hero">
-            <h1>What's the weather today?</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, odio, error vitae aperiam fugit est dolorum exercitationem blanditiis nisi maxime distinctio aut.</p>
-            <button>Check Weather</button>
+            <h1 class="load-hidden">What's the weather today?</h1>
+            <p class="load-hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, odio, error vitae aperiam fugit est dolorum exercitationem blanditiis nisi maxime distinctio aut.</p>
+            <a href="#weather"><button class="load-hidden">Check Weather</button></a>
         </div>
-        <div id="container3D"></div>
+        <div id="container3D" class="container3D load-hidden"></div>
             <script type="module" src="tree.min.js" class="hero-module"></script>
     </main>
     <section class="weather" id="weather">
         <div class="container">
-            <h2>Weatherly</h2>
-            <input type="text" id="city" placeholder="Enter City">
-            <button onclick="getWeather()">Search</button>
+            <h2 class="load-hidden">Weatherly</h2>
+            <input type="text" id="city" placeholder="Enter City" class="load-hidden">
+            <button onclick="getWeather()" class="load-hidden">Search</button>
             <img class="weather-icon" style="display: none;" />
             <div class="temp-div"></div>
             <div class="weather-info"></div>
@@ -40,11 +41,11 @@
     <section class="about" id="about">
         <div class="about-container">
             <div class="image-about">
-
+                <img src="assets/—Pngtree—planet earth weather map_15468397.png" alt="earth pictures" class="load-hidden">
             </div>
             <div class="text-about">
-                <h1>About Us</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis iusto! Tempore eum, accusantium aut debitis ea quas velit animi necessitatibus magnam facere adipisci veritatis sit, consequuntur fugit quod incidunt.</p>
+                <h1 class="load-hidden">About Us</h1>
+                <p class="load-hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis iusto! Tempore eum, accusantium aut debitis ea quas velit animi necessitatibus magnam facere adipisci veritatis sit, consequuntur fugit quod incidunt.</p>
             </div>
         </div>
     </section>
@@ -56,6 +57,19 @@
     <footer>
 
     </footer>
+ <script>
+    ScrollReveal().reveal('.text-hero h1', { delay: 300 });
+    ScrollReveal().reveal('.text-hero p', { delay: 500 });
+     ScrollReveal().reveal('.text-hero button', { delay: 600 });
+     ScrollReveal().reveal('.container3D',  { delay: 600 });
+      ScrollReveal().reveal('.container h2',  { delay: 300 });
+      ScrollReveal().reveal('.container input', { delay: 400 });
+      ScrollReveal().reveal('.container button', { delay: 500 });
+       ScrollReveal().reveal('.weather-icon');
+        ScrollReveal().reveal('.image-about img',  { delay: 300 });
+         ScrollReveal().reveal('.text-about h1',  { delay: 400 });
+         ScrollReveal().reveal('.text-about p',  { delay: 500 });
 
+ </script>
 </body>
 </html>

@@ -55,13 +55,14 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 2rem;
 }
+
 .text-hero {
     display: flex;
     flex-direction: column;
     max-width: 600px;
 }
+
 .text-hero h1 {
     color: #FFFFFF;
     font-size: 2.5rem;
@@ -83,6 +84,10 @@ main {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+.text-hero button a {
+    color: inherit;
+    text-decoration: none;
 }
 .text-hero button:hover {
     background-color: #334155;
@@ -179,6 +184,51 @@ input[type="text"] {
 }
  
 .about {
-    padding: 4rem;
-    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.about-container image-about {
+    max-width: 4rem 4rem;
+    border-radius: 0.475rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.about-container img {
+    height: 400px;
+    width: 400px;
+}
+
+.text-about {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-content: center;
+    max-width: 400px;
+}
+
+.text-about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.text-about p {
+    font-size: 1.2rem;
+    color: #E2E8F0;
+    line-height: 1.6;
+}
+
+html.sr .load-hidden {
+    visibility: hidden;
 }
