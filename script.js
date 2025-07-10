@@ -89,3 +89,10 @@ function showImage() {
    weatherIcon.style.display = 'block';
    weatherIcon.style.opacity = 1;
 }
+
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });

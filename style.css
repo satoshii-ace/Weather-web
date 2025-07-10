@@ -50,6 +50,52 @@ nav a:hover {
     color: #38BDF8;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #E2E8F0;
+  opacity: 1;
+}
+
+nav ul.nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  transition: max-height 0.3s ease-in-out;
+}
+
+@media (max-width: 769px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul.nav-links {
+    flex-direction: column;
+    background-color: #0F172A;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 999;
+    border-top: 1px solid #334155;
+	gap: 1rem;
+	padding: 0;
+  }
+
+  nav ul.nav-links.open {
+    max-height: 500px;
+  }
+
+  nav ul.nav-links li {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+
 main {
     padding: 10rem 4rem;
     display: flex;
@@ -94,6 +140,34 @@ main {
     color: #38BDF8;
     border: #38BDF8 1px solid;
 }
+@media (max-width: 768px) {
+	main {
+		flex-direction: column;
+		align-items: center;
+	}
+	.text-hero h1 {
+		font-size: 2rem;
+	}
+	.text-hero p {
+		font-size: 1rem;
+	}
+	.text-hero button {
+		width: 100%;
+	}
+	.text-hero {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+}
+@media (max-width: 480px) {
+	.text-hero h1 {
+		font-size: 1.5rem;
+	}
+	.text-hero p {
+		font-size: 0.9rem;
+	}
+}
+
 .weather {
     display: flex;
     justify-content: center;
@@ -104,15 +178,15 @@ main {
 
 .container {
      padding: 20px;
-     max-width: 400px;
      border-radius: 15px;
      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
      backdrop-filter: blur(10px);
      border: 1px solid rgba(255, 255, 255, 0.1);
      text-align: center;
+	 width: 100%;
 }
 .container input[type="text"] {
-   width: calc(100% - 16px);
+   width: calc(30% - 16px);
    padding: 8px;
    box-sizing: border-box;
    border-radius: 10px;
@@ -185,6 +259,33 @@ main {
     color: #E2E8F0;
     margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+	.container input[type="text"] {
+		width: calc(100% - 16px);
+	}
+	.text-hero h1 {
+		font-size: 2rem;
+	}
+	.text-hero p {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.text-hero h1 {
+		font-size: 1.5rem;
+	}
+	.text-hero p {
+		font-size: 0.9rem;
+	}
+	.container input[type="text"] {
+		width: calc(100% - 16px);
+	}
+	.container {
+		width: 90%;
+	}
+}
  
 .about {
     height: 100vh;
@@ -230,6 +331,34 @@ main {
     font-size: 1.2rem;
     color: #E2E8F0;
     line-height: 1.6;
+}
+@media (max-width: 768px) {
+	.about-container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.text-about h1 {
+		font-size: 2rem;
+	}
+	.text-about p {
+		font-size: 1rem;
+	}
+	.about-container img {
+		width: 300px;
+		height: 300px;
+	}
+}
+@media (max-width: 480px) {
+	.text-about h1 {
+		font-size: 1.5rem;
+	}
+	.text-about p {
+		font-size: 0.9rem;
+	}
+	.about-container img {
+		width: 250px;
+		height: 250px;
+	}
 }
 
 .contact {
@@ -439,13 +568,14 @@ textarea::-webkit-scrollbar-thumb{
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 	border: 1px solid #38BDF8;
 }
+
 .footer-container{
-	max-width: 1170px;
+	max-width: 100%;
 	margin:auto;
 }
 .footer-container .row{
 	display: flex;
-	flex-wrap: wrap;
+	width: 100%;
 }
 .footer-col .ul{
 	list-style: none;
@@ -453,6 +583,9 @@ textarea::-webkit-scrollbar-thumb{
 .footer{
 	background-color: #0F172A;
     padding: 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .footer-col{
    width: 25%;
@@ -520,6 +653,10 @@ textarea::-webkit-scrollbar-thumb{
   .footer-col{
     width: 100%;
 }
+ .footer-container .row{
+	flex-direction: column;
+	align-items: center;
+}
 }
 
 @media(max-width: 1100px){
@@ -527,13 +664,24 @@ textarea::-webkit-scrollbar-thumb{
 		flex-basis: 100%;
 	}
 }
-@media(max-width: 900px){
+@media(max-width: 769px){
 	.contact-container .row{
 		flex-wrap: wrap;
 	}
 	.row section.left, .row section.right{
 		flex-basis: 100%;
 		margin: 0px;
+	}
+}
+@media(max-width: 480px){
+	.row section.left{
+		margin-right: 0px;
+	}
+	.row section.right{
+		margin-left: 0px;
+	}
+	.contact-container .row{
+		padding: 0px 20px;
 	}
 }
 
