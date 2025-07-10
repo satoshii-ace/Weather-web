@@ -10,9 +10,9 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <nav >
-        <div class="logo">Weatherly</div>
-        <ul>
+    <nav class="load-hidden" >
+        <div class="logo load-hidden">Weatherly</div>
+        <ul class="load-hidden">
             <li><a href="#main">Home</a></li>
             <li><a href="#weather">Weather</a></li>
             <li><a href="#about">About</a></li>
@@ -129,10 +129,53 @@
 		</main>
 	</div>
     </section>
-    <footer>
-
-    </footer>
+    <footer class="footer">
+  	 <div class="footer-container load-hidden">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				<li><a href="#">affiliate program</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4 class="load-hidden">get help</h4>
+  	 			<ul class="load-hidden">
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">API</a></li>
+  	 				<li><a href="#">reviews</a></li>
+  	 				<li><a href="#">website status</a></li>
+  	 				<li><a href="#">support options</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4 class="load-hidden">Quick links</h4>
+  	 			<ul class="load-hidden">
+  	 				<li><a href="#">Home</a></li>
+  	 				<li><a href="#">Weather</a></li>
+  	 				<li><a href="#">About</a></li>
+  	 				<li><a href="#">Contact</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4 class="load-hidden">follow us</h4>
+  	 			<div class="social-links load-hidden">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
  <script>
+    ScrollReveal().reveal('nav', { delay: 100 });
+    ScrollReveal().reveal('.logo', { delay: 200 });
+    ScrollReveal().reveal('nav ul li', { delay: 300 });
     ScrollReveal().reveal('.text-hero h1', { delay: 300 });
     ScrollReveal().reveal('.text-hero p', { delay: 500 });
      ScrollReveal().reveal('.text-hero button', { delay: 600 });
@@ -149,6 +192,10 @@
             ScrollReveal().reveal('.contactTitle p', { delay: 500 });
             ScrollReveal().reveal('.iconGroup', { delay: 600 });
             ScrollReveal().reveal('.messageForm', { delay: 700 });
+            ScrollReveal().reveal('.footer-container', { delay: 300 });
+            ScrollReveal().reveal('.footer-col h4', { delay: 400 });
+            ScrollReveal().reveal('.footer-col ul li', { delay: 500 });
+            ScrollReveal().reveal('.footer-col .social-links', { delay: 600 });
  </script>
 </body>
 </html>
