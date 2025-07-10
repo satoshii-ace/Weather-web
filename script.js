@@ -87,4 +87,5 @@ function displayHourlyForcast(hourlyData) {
 function showImage() {
    const weatherIcon = document.querySelector('.weather-icon');
    weatherIcon.style.display = 'block';
+   weatherIcon.style.opacity = 1;
 }

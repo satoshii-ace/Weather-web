@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Web</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
@@ -31,12 +33,12 @@
             <h2 class="load-hidden">Weatherly</h2>
             <input type="text" id="city" placeholder="Enter City" class="load-hidden">
             <button onclick="getWeather()" class="load-hidden">Search</button>
-            <img class="weather-icon" style="display: none;" />
+            <img class="weather-icon load-hidden" src="" alt="Weather icon" />
             <div class="temp-div"></div>
             <div class="weather-info"></div>
             <div class="hourly-forecast"></div>
         </div>
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </section>
     <section class="about" id="about">
         <div class="about-container">
@@ -50,9 +52,82 @@
         </div>
     </section>
     <section class="contact" id="contact">
-        <div class="contact-container">
+        <div class="contact-container load-hidden">
+		<main class="row">
+			<section class="col left">
+				<div class="contactTitle">
+					<h2 class="load-hidden">Get In Touch</h2>
+					<p class="load-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+				</div>
+				<div class="contactInfo">
+					
+					<div class="iconGroup load-hidden">
+						<div class="icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						<div class="details">
+							<span>Phone</span>
+							<span>+00 110 111 00</span>
+						</div>
+					</div>
 
-        </div>
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+						<div class="details">
+							<span>Email</span>
+							<span>torresashleyclint@gmail.com</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="details">
+							<span>Location</span>
+							<span>X Street, Y Road, San Fransisco</span>
+						</div>
+					</div>
+				</div>
+				<div class="socialMedia">
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+			</section>
+			<section class="col right">
+				<form class="messageForm load-hidden">
+					
+					<div class="inputGroup halfWidth">
+						<input type="text" name="" required="required" required placeholder=" ">
+						<label>Your Name</label>
+					</div>
+
+					<div class="inputGroup halfWidth">
+						<input type="email" name="email" required="required" required placeholder=" ">
+						<label>Email</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<input type="text" name="" required="required">
+						<label>Subject</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<textarea required="required"></textarea>
+						<label>Say Something</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<button>Send Message</button>
+					</div>
+				</form>
+			</section>
+		</main>
+	</div>
     </section>
     <footer>
 
@@ -69,7 +144,11 @@
         ScrollReveal().reveal('.image-about img',  { delay: 300 });
          ScrollReveal().reveal('.text-about h1',  { delay: 400 });
          ScrollReveal().reveal('.text-about p',  { delay: 500 });
-
+            ScrollReveal().reveal('.contact-container', { delay: 300 });
+            ScrollReveal().reveal('.contactTitle h2', { delay: 400 });
+            ScrollReveal().reveal('.contactTitle p', { delay: 500 });
+            ScrollReveal().reveal('.iconGroup', { delay: 600 });
+            ScrollReveal().reveal('.messageForm', { delay: 700 });
  </script>
 </body>
 </html>
