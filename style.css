@@ -377,7 +377,6 @@ main {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	max-width: 1100px;
 }
 .row section.col{
 	display: flex;
@@ -385,7 +384,6 @@ main {
 }
 .row section.left{
 	flex-basis: 35%;
-	min-width: 320px;
 	margin-right: 60px;
 }
 .row section.right{
@@ -683,6 +681,38 @@ textarea::-webkit-scrollbar-thumb{
 	.contact-container .row{
 		padding: 0px 20px;
 	}
+}
+@media (max-width: 325px) {
+    .contact-container {
+        padding: 10px 2px;
+    }
+    .contact-container .row {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .row section.left,
+    .row section.right {
+        flex-basis: 100%;
+        margin: 0;
+        min-width: 0;
+    }
+    section.left .contactTitle h2 {
+        font-size: 20px;
+    }
+    section.left .contactTitle p,
+    .iconGroup .details span,
+    .inputGroup label,
+    .messageForm input,
+    .messageForm textarea {
+        font-size: 14px;
+    }
+    .messageForm textarea {
+        height: 120px;
+    }
+    .inputGroup button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 }
 
 html.sr .load-hidden {
