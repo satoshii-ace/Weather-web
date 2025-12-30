@@ -168,6 +168,22 @@ main {
 	}
 }
 
+.container3D {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #E2E8F0;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
 .weather {
     display: flex;
     justify-content: center;
